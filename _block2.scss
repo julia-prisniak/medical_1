@@ -1,0 +1,134 @@
+@import "../var/_var";
+@import "../mixin/_mixin";
+
+.mdservices-section {
+    background: $main-background-color;
+    @include shape(100px, 62px, unset, unset);
+    padding-bottom: 144px;
+    &__title {
+        @include red-header;
+        text-align: center;
+        padding-top: 73px;
+        z-index: 10;
+    }
+    &__subtitle {
+        font-family: Palanquin Dark;
+        font-size: 56px;
+        line-height: 64px;
+        text-align: center;
+        padding-top: 16px;
+        padding-bottom: 71px;
+    }
+    &__container {
+        display: grid;
+        padding-left: 135px;
+        grid-template-rows: repeat(2, 224px);
+        grid-template-columns: 170px 170px 170px 570px;
+        grid-gap: 31px;
+        z-index: 10;
+    }
+    &__card {
+        width: 170px;
+        height: 224px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.101081);
+        border-radius: 16px;
+        background: #ffffff;
+        overflow: hidden;
+    }
+    &__link {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        text-decoration: none;
+        font-family: Palanquin;
+        font-size: 20px;
+        text-align: center;
+        color: #333333;
+
+        &--round {
+            width: 102px;
+            height: 102px;
+            border-radius: 50%;
+            background: $main-background-color;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover {
+            background: $main-color-red;
+            svg path {
+                fill: white;
+            }
+            .mdservices-section__link--round {
+                background: #d0021b;
+            }
+        }
+    }
+    &__wrap {
+        position: relative;
+        z-index: 10;
+    }
+    &__count {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background: $main-color-red;
+        width: 86px;
+        height: 48px;
+        border-radius: 24px;
+        font-family: Palanquin;
+        font-size: 23px;
+        color: #ffffff;
+        right: 40px;
+        top: -27px;
+        &--img {
+            width: 20px;
+            height: 100%;
+            margin-left: 22px;
+        }
+        &--numb {
+            margin-left: 10px;
+            line-height: 32px;
+        }
+    }
+    &__description {
+        width: 570px;
+        background: #ffffff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.101081);
+        border-radius: 16px;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        z-index: 10;
+        &--img {
+            width: 100%;
+        }
+        &--name {
+            font-family: Palanquin Dark;
+            font-size: 24px;
+            color: $main-title-color;
+            padding-left: 48px;
+            padding-top: 38px;
+            padding-bottom: 11px;
+        }
+        &--text {
+            font-family: Palanquin;
+            width: 470px;
+            height: 69px;
+            font-size: 16px;
+            padding-left: 48px;
+            padding-bottom: 15px;
+            color: rgba(51, 51, 51, 0.501557);
+        }
+        &--btn {
+            margin: 20px 48px;
+            @include grey-btn;
+        }
+    }
+}

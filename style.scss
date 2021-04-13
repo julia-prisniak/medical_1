@@ -1,0 +1,14 @@
+@import "./var/_var";
+@import "./mixin/_mixin";
+@import "./section/_block1";
+@import "./section/_block2";
+@import "./section/_block3";
+@import "./section/_block4";
+@import "./section/_block5";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}

@@ -1,0 +1,68 @@
+@import '../var/_var';
+
+@mixin red-btn {
+    color: #FFFFFF;
+    background-color: $main-color-red;
+    text-decoration: unset;
+    font-family: Palanquin Dark, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 33px;
+    height: 48px;
+    border-radius: 24px;
+    text-align: center;
+    padding: 5px 30px;
+}
+@mixin yellow-btn {
+    color: #FFFFFF;
+    background-color: #F5A623;
+    text-decoration: unset;
+    font-family: Palanquin Dark, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 33px;
+    height: 48px;
+    border-radius: 24px;
+    text-align: center;
+    padding: 5px 30px;
+    display: inline-block;
+}
+@mixin grey-btn {
+    color: $main-color-red;
+    background-color: #D8D8D8;
+    text-decoration: unset;
+    font-size: 18px;
+    font-family: Palanquin Dark;
+    font-weight: bold;
+    line-height: 33px;
+    height: 48px;
+    border-radius: 24px;
+    text-align: center;
+    padding: 5px 30px;
+    display: inline-block;
+}
+@mixin red-header {
+    color: $main-header-color;
+    font-family: Palanquin Dark;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+@mixin shape($top, $right, $bottom, $left) {
+    position: relative;
+    &::before{
+    content: '';
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 176px;
+    height: 176px;
+    background: transparent url('../img/svg/Shape.svg') center center no-repeat;
+    background-size: cover;
+    }
+}

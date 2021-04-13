@@ -1,0 +1,103 @@
+@import "../var/_var";
+@import "../mixin/_mixin";
+.our-blog {
+  position: relative;
+  @include shape(181px, 66px, unset, unset);
+  padding-bottom: 80px;
+
+  &__title {
+    @include red-header;
+    text-align: center;
+    padding-top: 73px;
+  }
+  &__subtitle {
+    text-align: center;
+    margin: 40px auto;
+    width: 379px;
+    height: 64px;
+    font-family: Palanquin Dark;
+    font-size: 56px;
+    line-height: 64px;
+  }
+  &__cover {
+    padding-left: 135px;
+    padding-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(2, 224px);
+    gap: 30px 30px;
+  }
+  &__item {
+    position: relative;
+    width: 370px;
+    height: 480px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.101081);
+    border-radius: 16px;
+    &--category {
+      margin-top: 32px;
+      margin-left: 48px;
+      font-family: Palanquin;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    &--header {
+      margin-top: 320px;
+      margin-left: 48px;
+      width: 277px;
+      font-family: Palanquin Dark;
+      font-size: 24px;
+      line-height: 32px;
+      color: #ffffff;
+    }
+    &--date {
+      margin-left: 48px;
+      font-family: Palanquin;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.502972);
+    }
+    &--img {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  &__block {
+    flex-direction: column;
+    width: 370px;
+    height: 224px;
+    grid-column-start: 3;
+    background: $main-background-color;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.101081);
+    border-radius: 16px;
+    &--head {
+      margin-top: 32px;
+      margin-left: 48px;
+      font-family: Palanquin;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    &--par {
+      margin-left: 48px;
+      margin-bottom: 19px;
+      width: 273px;
+      font-family: Palanquin Dark;
+      font-size: 24px;
+    }
+    &--date {
+      margin-left: 48px;
+      font-family: Palanquin;
+      font-size: 16px;
+      color: rgba(51, 51, 51, 0.501557);
+    }
+  }
+
+  &__btn {
+    display: table;
+    margin: 0 auto;
+    @include red-btn;
+  }
+}

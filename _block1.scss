@@ -1,0 +1,136 @@
+@import "../var/_var";
+@import "../mixin/_mixin";
+
+.service-section {
+    background-color: $main-background-color;
+    padding-bottom: 50px;
+    &__nav {
+        padding-top: 33px;
+        background: #ffffff;
+        display: flex;
+
+        &--logo {
+            margin-left: 135px;
+            padding-right: 38px;
+        }
+        &--menu {
+            width: 480px;
+            margin-right: 200px;
+        }
+        &--section {
+            margin-right: 30px;
+            margin-top: 50px;
+            font-family: Palanquin;
+            font-size: 16px;
+            color: #333333;
+            text-decoration: none;
+        }
+        &--btn {
+            margin-left: 500px;
+            @include yellow-btn;
+        }
+    }
+    &__medical {
+        position: relative;
+        background: #ffffff;
+        padding-bottom: 100px;
+        &--title {
+            margin-left: 135px;
+            padding-top: 153px;
+            @include red-header;
+        }
+        &--subtitle {
+            margin-left: 135px;
+            padding-top: 17px;
+            width: 352px;
+            line-height: 80px;
+            font-family: Palanquin Dark;
+            font-size: 72px;
+        }
+        &--par {
+            margin-left: 135px;
+            padding-top: 30px;
+            padding-bottom: 37px;
+            width: 370px;
+            font-family: Palanquin;
+            font-size: 20px;
+        }
+        &--img {
+            position: absolute;
+            right: 62px;
+        }
+        &--btn {
+            margin-left: 135px;
+            margin-bottom: 240px;
+            @include red-btn;
+        }
+    }
+    &__container {
+        width: 1170px;
+        margin: 0 auto;
+        padding-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        margin-top: 80px;
+        width: 270px;
+        height: 288px;
+        border-radius: 16px;
+        padding: 22px 32px 32px 32px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+            0px 2px 4px rgba(0, 0, 0, 0.101081);
+        background-color: white;
+        &--filled {
+            background-color: $main-color-red;
+            .service-section__item--title {
+                color: white;
+            }
+        }
+    }
+    &__item--wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 19px;
+    }
+    &__item--img {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+    }
+    &__item--title {
+        font-family: "Palanquin Dark", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        width: 50%;
+        color: $main-title-color;
+    }
+    &__item--par {
+        font-family: Palanquin, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        color: $main-text-color;
+        margin-bottom: 40px;
+    }
+    &__item--btn {
+        @include red-btn;
+    }
+    &__info {
+        &--legend {
+            padding-top: 19px;
+            font-family: Palanquin, sans-serif;
+            font-size: 14px;
+            line-height: 14px;
+            color: rgba(255, 255, 255, 0.495556);
+        }
+        &--data {
+            font-size: 16px;
+            line-height: 32px;
+            color: #ffffff;
+        }
+    }
+}

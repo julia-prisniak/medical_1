@@ -1,0 +1,82 @@
+@import "../var/_var";
+@import "../mixin/_mixin";
+.testimonials-section {
+    @include shape(195px, unset, unset, 67px);
+    &__cover {
+        padding-top: 73px;
+        padding-bottom: 80px;
+        background: $main-background-color;
+    }
+    &__title {
+        text-align: center;
+        @include red-header;
+    }
+    &__subtitle {
+        padding-top: 16px;
+        padding-bottom: 55px;
+        text-align: center;
+        font-family: Palanquin Dark;
+        font-size: 56px;
+    }
+    &__btn {
+        display: table;
+        margin: 32px auto 0 auto;
+        @include red-btn;
+    }
+    &__wrap {
+        display: flex;
+    }
+    &__quote {
+        width: 570px;
+        background: #ffffff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.101081);
+        border-radius: 16px;
+        margin: 0 auto;
+        &--mark {
+            margin-top: 32px;
+            margin-left: 32px;
+            width: 102px;
+            height: 102px;
+            border-radius: 50%;
+            display: flex;
+            background: $main-background-color;
+        }
+        &--img {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        &--par {
+            margin-left: 48px;
+            width: 474px;
+            height: 131px;
+            font-family: Palanquin;
+            font-size: 16px;
+            line-height: 32px;
+            color: rgba(51, 51, 51, 0.501557);
+        }
+        &--person {
+            margin-left: 48px;
+            margin-bottom: 58px;
+            display: flex;
+            overflow: hidden;
+        }
+        &--foto {
+            border: 8px solid #e13856;
+            border-radius: 50%;
+        }
+        &--mane {
+            margin-left: 25px;
+            font-family: Palanquin Dark;
+            font-size: 24px;
+        }
+        &--position {
+            margin-left: 25px;
+            font-family: Palanquin;
+            font-size: 16px;
+            color: rgba(51, 51, 51, 0.501557);
+        }
+    }
+}
